@@ -106,10 +106,12 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 function Button({
   children,
   href,
+  external = false,
   variant = "primary",
 }: {
   children: React.ReactNode;
   href: string;
+  external?: boolean;
   variant?: "primary" | "secondary";
 }) {
   const styles =
@@ -120,7 +122,9 @@ function Button({
   return (
     <a
       href={href}
-      className={`inline-flex h-11 items-center justify-center border px-7 text-[0.84rem] font-medium transition duration-300 ease-out sm:h-12 sm:px-8 ${styles}`}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className={`inline-flex h-11 cursor-pointer items-center justify-center border px-7 text-[0.84rem] font-medium transition duration-300 ease-out active:translate-y-px sm:h-12 sm:px-8 ${styles}`}
     >
       {children}
     </a>
@@ -288,10 +292,14 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-              <Button href="https://wa.me/" variant="primary">
+              <Button
+                href="https://wa.me/50660352525?text=Hola,%20vi%20Miveh%20Hub%20y%20me%20gustaría%20conversar%20sobre%20un%20proyecto."
+                external
+                variant="primary"
+              >
                 Escribir por WhatsApp
               </Button>
-              <Button href="mailto:hola@mivehhub.com" variant="secondary">
+              <Button href="mailto:hello@mivehhub.com" variant="secondary">
                 Enviar correo
               </Button>
             </div>
