@@ -1,0 +1,308 @@
+const services = [
+  {
+    title: "Web",
+    copy: "Landing pages y sitios simples con estructura clara, diseño limpio y enfoque comercial.",
+  },
+  {
+    title: "Contenido",
+    copy: "Piezas visuales, ideas y formatos para comunicar mejor en redes, propuestas o canales digitales.",
+  },
+  {
+    title: "Diseño",
+    copy: "Identidad visual básica, presentaciones, plantillas y materiales que hacen que la marca se vea más ordenada y profesional.",
+  },
+];
+
+const work = [
+  {
+    name: "NAOS",
+    type: "Visual direction",
+    detail:
+      "Dirección visual y estructura de contenido para elevar la presencia digital de una marca en crecimiento.",
+  },
+  {
+    name: "Three29 Partners",
+    type: "Corporate landing",
+    detail:
+      "Landing corporativa minimal para una firma boutique enfocada en desarrollo de negocios y tecnología.",
+  },
+  {
+    name: "ENM Propiedades",
+    type: "Digital presence",
+    detail:
+      "Presencia digital inicial para comunicar propiedades con claridad, confianza y criterio visual.",
+  },
+  {
+    name: "Tico Stick",
+    type: "Brand direction",
+    detail:
+      "Concepto visual, empaque y dirección de marca para un producto físico con enfoque lifestyle.",
+  },
+  {
+    name: "Parfectionist",
+    type: "Content concept",
+    detail:
+      "Concepto de contenido y comunidad alrededor del golf desde una narrativa auténtica y visual.",
+  },
+];
+
+const workLayouts = [
+  {
+    card: "lg:col-span-12 lg:min-h-[29rem]",
+    inner: "lg:grid-cols-[minmax(0,0.95fr)_minmax(26rem,0.85fr)] lg:items-end",
+    title: "lg:text-[5.8rem]",
+    description: "lg:self-end",
+  },
+  {
+    card: "lg:col-span-7 lg:min-h-[25rem]",
+    inner: "lg:min-h-[18rem]",
+    title: "lg:text-[4.6rem]",
+    description: "",
+  },
+  {
+    card: "lg:col-span-5 lg:min-h-[25rem]",
+    inner: "lg:min-h-[18rem]",
+    title: "lg:text-[3.8rem]",
+    description: "",
+  },
+  {
+    card: "lg:col-span-5 lg:min-h-[25rem]",
+    inner: "lg:min-h-[18rem]",
+    title: "lg:text-[3.8rem]",
+    description: "",
+  },
+  {
+    card: "lg:col-span-7 lg:min-h-[25rem]",
+    inner: "lg:min-h-[18rem]",
+    title: "lg:text-[4.6rem]",
+    description: "",
+  },
+];
+
+const process = [
+  {
+    title: "Claridad",
+    copy: "Ordenamos la idea, el objetivo y lo que la marca necesita comunicar.",
+  },
+  {
+    title: "Diseño",
+    copy: "Creamos una dirección visual limpia, funcional y alineada al negocio.",
+  },
+  {
+    title: "Ejecución",
+    copy: "Entregamos piezas listas para usar: web, contenido, plantillas o material comercial.",
+  },
+];
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="mb-10 flex items-center gap-3 text-[0.66rem] font-medium uppercase leading-none tracking-wideish text-mist sm:mb-12">
+      <span className="h-px w-6 bg-lime/70" />
+      {children}
+    </p>
+  );
+}
+
+function Button({
+  children,
+  href,
+  variant = "primary",
+}: {
+  children: React.ReactNode;
+  href: string;
+  variant?: "primary" | "secondary";
+}) {
+  const styles =
+    variant === "primary"
+      ? "border-bone bg-bone text-ink hover:border-bone/80 hover:bg-transparent hover:text-bone"
+      : "border-line bg-[#111114] text-bone/90 hover:border-bone/35 hover:bg-[#151518] hover:text-bone";
+
+  return (
+    <a
+      href={href}
+      className={`inline-flex h-11 items-center justify-center border px-7 text-[0.82rem] font-medium transition duration-300 ease-out sm:h-12 sm:px-8 ${styles}`}
+    >
+      {children}
+    </a>
+  );
+}
+
+export default function Home() {
+  return (
+    <main className="min-h-screen overflow-hidden bg-ink text-bone">
+      <header className="mx-auto flex w-full max-w-[88rem] items-center justify-between px-5 py-7 sm:px-8 lg:px-12 lg:py-9">
+        <a href="#hero" className="text-[0.78rem] font-normal tracking-wideish text-bone/90 transition duration-300 hover:text-bone">
+          Miveh Hub
+        </a>
+        <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.76rem] tracking-[0.04em] text-mist/80 md:flex">
+          {["Trabajo", "Servicios", "Proceso", "Contacto"].map((item) => (
+            <a
+              key={item}
+              href={`#${item === "Trabajo" ? "work" : item.toLowerCase()}`}
+              className="transition duration-300 hover:text-bone/95"
+            >
+              {item}
+            </a>
+          ))}
+        </nav>
+      </header>
+
+      <section
+        id="hero"
+        className="relative mx-auto grid min-h-[calc(86vh-5.75rem)] w-full max-w-[88rem] content-center px-5 pb-16 pt-14 sm:px-8 sm:pt-20 lg:min-h-[calc(88vh-6.5rem)] lg:px-12 lg:pt-24"
+      >
+        <div className="absolute right-5 top-20 hidden h-28 w-px bg-line/70 md:block" />
+        <div className="absolute bottom-20 right-5 hidden gap-2 md:flex">
+          <span className="h-1.5 w-1.5 bg-navy" />
+          <span className="h-1.5 w-1.5 bg-lime" />
+          <span className="h-1.5 w-1.5 bg-copper" />
+        </div>
+
+        <div className="max-w-6xl">
+          <p className="mb-7 text-[0.68rem] font-medium uppercase tracking-wideish text-mist sm:mb-9 sm:text-xs">
+            web + contenido + diseño
+          </p>
+          <h1 className="max-w-[11ch] font-serif text-[clamp(4.7rem,13vw,10.8rem)] leading-[0.86] tracking-normal text-balance">
+            Miveh Hub
+          </h1>
+          <p className="mt-8 max-w-[39rem] text-[1.2rem] font-light leading-[1.58] text-mist/90 sm:mt-10 sm:text-[1.48rem] sm:leading-[1.5]">
+            Creamos presencia digital clara, visual y alineada para marcas que
+            quieren verse más profesionales sin complicarse.
+          </p>
+          <div className="mt-9 flex flex-col gap-3 sm:mt-12 sm:flex-row">
+            <Button href="#work">Ver proyectos</Button>
+            <Button href="#contacto" variant="secondary">
+              Hablemos
+            </Button>
+          </div>
+        </div>
+
+        <div className="mt-20 grid border-y border-line/70 py-4 text-[0.66rem] uppercase leading-6 tracking-wideish text-mist sm:mt-20 sm:grid-cols-3 sm:py-5">
+          <span>Digital studio</span>
+          <span className="mt-3 sm:mt-0 sm:text-center">Editorial systems</span>
+          <span className="mt-3 sm:mt-0 sm:text-right">Boutique delivery</span>
+        </div>
+      </section>
+
+      <section id="work" className="mx-auto w-full max-w-[88rem] px-5 pb-32 pt-24 sm:px-8 lg:px-12 lg:pb-52 lg:pt-36">
+        <SectionLabel>Selected Work</SectionLabel>
+        <div className="mb-16 grid gap-9 sm:mb-20 lg:grid-cols-[1fr_27rem] lg:items-end">
+          <h2 className="max-w-4xl font-serif text-[clamp(3.8rem,8vw,7.7rem)] leading-[0.9] text-balance">
+            Selected Work
+          </h2>
+          <p className="max-w-[25rem] text-[0.98rem] font-light leading-[1.85] text-mist/85 lg:pb-4">
+            A focused selection of visual systems, landing pages and content directions shaped with clarity, restraint and commercial intent.
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-12 lg:gap-6">
+          {work.map((project, index) => {
+            const layout = workLayouts[index];
+
+            return (
+            <article
+              key={project.name}
+              className={`group relative overflow-hidden border border-line/75 bg-[#101013] px-6 py-9 transition duration-300 ease-out hover:-translate-y-0.5 hover:border-bone/25 hover:bg-[#121215] sm:px-8 sm:py-11 lg:px-11 lg:py-12 ${layout.card}`}
+            >
+              <div className={`flex h-full flex-col justify-between gap-16 ${layout.inner}`}>
+                <div>
+                  <p className="mb-16 text-[0.66rem] uppercase tracking-wideish text-bone/45 transition duration-300 group-hover:text-bone/65 sm:mb-20">
+                    {project.type}
+                  </p>
+                  <h3 className={`max-w-[12ch] text-[clamp(2.35rem,6.5vw,4.85rem)] font-normal leading-[0.96] text-bone ${layout.title}`}>
+                    {project.name}
+                  </h3>
+                </div>
+                <div className={`max-w-xl ${layout.description}`}>
+                  <p className="text-base font-light leading-8 text-mist transition duration-300 group-hover:text-bone">
+                    {project.detail}
+                  </p>
+                  <p className="mt-8 inline-flex border-b border-bone/15 pb-1 text-[0.66rem] uppercase tracking-wideish text-bone/45 transition duration-300 group-hover:border-bone/35 group-hover:text-bone/75">
+                    Explore
+                  </p>
+                </div>
+              </div>
+            </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section id="servicios" className="mx-auto w-full max-w-[88rem] border-t border-line/60 px-5 pb-32 pt-24 sm:px-8 lg:px-12 lg:pb-52 lg:pt-32">
+        <SectionLabel>Services</SectionLabel>
+        <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-24">
+          <h2 className="max-w-xl font-serif text-[clamp(3rem,7vw,5.8rem)] leading-[0.96]">
+            Sistemas claros para marcas con más criterio.
+          </h2>
+          <div className="grid border-y border-line/75">
+            {services.map((service) => (
+              <article
+                key={service.title}
+                className="group grid gap-5 border-b border-line/65 py-9 transition duration-300 last:border-b-0 hover:bg-[#111114] sm:grid-cols-[9rem_1fr] sm:gap-12 sm:px-5 lg:py-10"
+              >
+                <h3 className="text-lg font-medium text-bone">
+                  {service.title}
+                </h3>
+                <p className="max-w-2xl text-base leading-8 text-mist transition duration-300 group-hover:text-bone">
+                  {service.copy}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="proceso" className="mx-auto w-full max-w-[88rem] px-5 py-28 sm:px-8 lg:px-12 lg:py-44">
+        <SectionLabel>Process</SectionLabel>
+        <div className="grid gap-14 lg:grid-cols-[1fr_1.45fr] lg:gap-24">
+          <h2 className="max-w-xl font-serif text-[clamp(3rem,7vw,5.8rem)] leading-[0.96]">
+            Menos ruido. Más intención.
+          </h2>
+          <div className="grid gap-px border-y border-line/80 bg-line/80 md:grid-cols-3 md:border">
+            {process.map((step, index) => (
+              <article
+                key={step.title}
+                className="bg-ink p-7 transition duration-300 hover:bg-[#111114] lg:p-8"
+              >
+                <span className="mb-12 block text-[0.68rem] uppercase tracking-wideish text-copper">
+                  0{index + 1}
+                </span>
+                <h3 className="text-2xl font-medium">{step.title}</h3>
+                <p className="mt-5 text-sm leading-7 text-mist">{step.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" className="mx-auto w-full max-w-[88rem] px-5 py-28 sm:px-8 lg:px-12 lg:py-44">
+        <div className="border-y border-line/75 py-20 lg:py-28">
+          <SectionLabel>Contact</SectionLabel>
+          <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+            <div>
+              <h2 className="max-w-5xl font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.98]">
+                ¿Tienes una marca que necesita verse más clara y profesional?
+              </h2>
+              <p className="mt-8 max-w-xl text-xl leading-9 text-mist">
+                Hablemos y definimos qué necesita primero.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+              <Button href="https://wa.me/" variant="primary">
+                Escribir por WhatsApp
+              </Button>
+              <Button href="mailto:hola@mivehhub.com" variant="secondary">
+                Enviar correo
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="mx-auto flex w-full max-w-[88rem] flex-col gap-4 px-5 pb-8 text-[0.68rem] uppercase tracking-wideish text-mist sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
+        <span>Miveh Hub</span>
+        <span>web + contenido + diseño</span>
+      </footer>
+    </main>
+  );
+}
