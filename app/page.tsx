@@ -96,7 +96,7 @@ const process = [
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-10 flex items-center gap-3 text-[0.66rem] font-medium uppercase leading-none tracking-wideish text-mist sm:mb-12">
+    <p className="mb-10 flex items-center gap-3 text-[0.68rem] font-medium uppercase leading-none tracking-wideish text-mist/95 sm:mb-12">
       <span className="h-px w-6 bg-lime/70" />
       {children}
     </p>
@@ -120,7 +120,7 @@ function Button({
   return (
     <a
       href={href}
-      className={`inline-flex h-11 items-center justify-center border px-7 text-[0.82rem] font-medium transition duration-300 ease-out sm:h-12 sm:px-8 ${styles}`}
+      className={`inline-flex h-11 items-center justify-center border px-7 text-[0.84rem] font-medium transition duration-300 ease-out sm:h-12 sm:px-8 ${styles}`}
     >
       {children}
     </a>
@@ -131,10 +131,10 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-ink text-bone">
       <header className="mx-auto flex w-full max-w-[88rem] items-center justify-between px-5 py-7 sm:px-8 lg:px-12 lg:py-9">
-        <a href="#hero" className="text-[0.78rem] font-normal tracking-wideish text-bone/90 transition duration-300 hover:text-bone">
+        <a href="#hero" className="text-[0.8rem] font-medium tracking-wideish text-bone/95 transition duration-300 hover:text-bone">
           Miveh Hub
         </a>
-        <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.76rem] tracking-[0.04em] text-mist/80 md:flex">
+        <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.78rem] font-medium tracking-[0.05em] text-mist/90 md:flex">
           {["Trabajo", "Servicios", "Proceso", "Contacto"].map((item) => (
             <a
               key={item}
@@ -159,13 +159,13 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl">
-          <p className="mb-7 text-[0.68rem] font-medium uppercase tracking-wideish text-mist sm:mb-9 sm:text-xs">
+          <p className="mb-7 text-[0.7rem] font-medium uppercase tracking-wideish text-mist/95 sm:mb-9 sm:text-xs">
             web + contenido + diseño
           </p>
-          <h1 className="max-w-[11ch] font-serif text-[clamp(4.7rem,13vw,10.8rem)] leading-[0.86] tracking-normal text-balance">
+          <h1 className="max-w-[11ch] font-serif text-[clamp(4.7rem,13vw,10.8rem)] font-medium leading-[0.86] tracking-normal text-balance">
             Miveh Hub
           </h1>
-          <p className="mt-8 max-w-[39rem] text-[1.2rem] font-light leading-[1.58] text-mist/90 sm:mt-10 sm:text-[1.48rem] sm:leading-[1.5]">
+          <p className="mt-8 max-w-[39rem] text-[1.2rem] font-normal leading-[1.64] text-mist sm:mt-10 sm:text-[1.48rem] sm:leading-[1.55]">
             Creamos presencia digital clara, visual y alineada para marcas que
             quieren verse más profesionales sin complicarse.
           </p>
@@ -177,7 +177,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-20 grid border-y border-line/70 py-4 text-[0.66rem] uppercase leading-6 tracking-wideish text-mist sm:mt-20 sm:grid-cols-3 sm:py-5">
+        <div className="mt-20 grid border-y border-line/70 py-4 text-[0.68rem] font-medium uppercase leading-6 tracking-wideish text-mist/90 sm:mt-20 sm:grid-cols-3 sm:py-5">
           <span>Digital studio</span>
           <span className="mt-3 sm:mt-0 sm:text-center">Editorial systems</span>
           <span className="mt-3 sm:mt-0 sm:text-right">Boutique delivery</span>
@@ -190,7 +190,7 @@ export default function Home() {
           <h2 className="max-w-4xl font-serif text-[clamp(3.8rem,8vw,7.7rem)] leading-[0.9] text-balance">
             Selected Work
           </h2>
-          <p className="max-w-[25rem] text-[0.98rem] font-light leading-[1.85] text-mist/85 lg:pb-4">
+          <p className="max-w-[25rem] text-[1rem] font-normal leading-[1.85] text-mist/95 lg:pb-4">
             A focused selection of visual systems, landing pages and content directions shaped with clarity, restraint and commercial intent.
           </p>
         </div>
@@ -206,18 +206,18 @@ export default function Home() {
             >
               <div className={`flex h-full flex-col justify-between gap-16 ${layout.inner}`}>
                 <div>
-                  <p className="mb-16 text-[0.66rem] uppercase tracking-wideish text-bone/45 transition duration-300 group-hover:text-bone/65 sm:mb-20">
+                  <p className="mb-16 text-[0.68rem] font-medium uppercase tracking-wideish text-bone/55 transition duration-300 group-hover:text-bone/75 sm:mb-20">
                     {project.type}
                   </p>
-                  <h3 className={`max-w-[12ch] text-[clamp(2.35rem,6.5vw,4.85rem)] font-normal leading-[0.96] text-bone ${layout.title}`}>
+                  <h3 className={`max-w-[12ch] text-[clamp(2.35rem,6.5vw,4.85rem)] font-medium leading-[0.96] text-bone ${layout.title}`}>
                     {project.name}
                   </h3>
                 </div>
                 <div className={`max-w-xl ${layout.description}`}>
-                  <p className="text-base font-light leading-8 text-mist transition duration-300 group-hover:text-bone">
+                  <p className="text-base font-normal leading-8 text-mist/95 transition duration-300 group-hover:text-bone">
                     {project.detail}
                   </p>
-                  <p className="mt-8 inline-flex border-b border-bone/15 pb-1 text-[0.66rem] uppercase tracking-wideish text-bone/45 transition duration-300 group-hover:border-bone/35 group-hover:text-bone/75">
+                  <p className="mt-8 inline-flex border-b border-bone/20 pb-1 text-[0.68rem] font-medium uppercase tracking-wideish text-bone/55 transition duration-300 group-hover:border-bone/40 group-hover:text-bone/80">
                     Explore
                   </p>
                 </div>
@@ -243,7 +243,7 @@ export default function Home() {
                 <h3 className="text-lg font-medium text-bone">
                   {service.title}
                 </h3>
-                <p className="max-w-2xl text-base leading-8 text-mist transition duration-300 group-hover:text-bone">
+                <p className="max-w-2xl text-base font-normal leading-8 text-mist/95 transition duration-300 group-hover:text-bone">
                   {service.copy}
                 </p>
               </article>
@@ -268,7 +268,7 @@ export default function Home() {
                   0{index + 1}
                 </span>
                 <h3 className="text-2xl font-medium">{step.title}</h3>
-                <p className="mt-5 text-sm leading-7 text-mist">{step.copy}</p>
+                <p className="mt-5 text-sm font-normal leading-7 text-mist/95">{step.copy}</p>
               </article>
             ))}
           </div>
@@ -283,7 +283,7 @@ export default function Home() {
               <h2 className="max-w-5xl font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.98]">
                 ¿Tienes una marca que necesita verse más clara y profesional?
               </h2>
-              <p className="mt-8 max-w-xl text-xl leading-9 text-mist">
+              <p className="mt-8 max-w-xl text-xl font-normal leading-9 text-mist/95">
                 Hablemos y definimos qué necesita primero.
               </p>
             </div>
@@ -299,7 +299,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="mx-auto flex w-full max-w-[88rem] flex-col gap-4 px-5 pb-8 text-[0.68rem] uppercase tracking-wideish text-mist sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
+      <footer className="mx-auto flex w-full max-w-[88rem] flex-col gap-4 px-5 pb-8 text-[0.68rem] font-medium uppercase tracking-wideish text-mist/90 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
         <span>Miveh Hub</span>
         <span>web + contenido + diseño</span>
       </footer>
