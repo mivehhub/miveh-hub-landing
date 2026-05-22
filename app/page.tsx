@@ -96,7 +96,7 @@ const process = [
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-10 flex items-center gap-3 text-[0.68rem] font-medium uppercase leading-none tracking-wideish text-mist/95 sm:mb-12">
+    <p className="mb-10 flex items-center gap-3 text-[0.72rem] font-medium uppercase leading-none tracking-wideish text-mist sm:mb-12">
       <span className="h-px w-6 bg-lime/70" />
       {children}
     </p>
@@ -135,10 +135,10 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-ink text-bone">
       <header className="mx-auto flex w-full max-w-[88rem] items-center justify-between px-5 py-7 sm:px-8 lg:px-12 lg:py-9">
-        <a href="#hero" className="text-[0.8rem] font-medium tracking-wideish text-bone/95 transition duration-300 hover:text-bone">
+        <a href="#hero" className="text-[0.82rem] font-medium tracking-wideish text-bone transition duration-300 hover:text-bone">
           Miveh Hub
         </a>
-        <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.78rem] font-medium tracking-[0.05em] text-mist/90 md:flex">
+        <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.8rem] font-medium tracking-[0.055em] text-mist md:flex">
           {["Trabajo", "Servicios", "Proceso", "Contacto"].map((item) => (
             <a
               key={item}
@@ -163,7 +163,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl">
-          <p className="mb-7 text-[0.7rem] font-medium uppercase tracking-wideish text-mist/95 sm:mb-9 sm:text-xs">
+          <p className="mb-7 text-[0.72rem] font-medium uppercase tracking-wideish text-mist sm:mb-9 sm:text-xs">
             web + contenido + diseño
           </p>
           <h1 className="max-w-[11ch] font-serif text-[clamp(4.7rem,13vw,10.8rem)] font-medium leading-[0.86] tracking-normal text-balance">
@@ -181,7 +181,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-20 grid border-y border-line/70 py-4 text-[0.68rem] font-medium uppercase leading-6 tracking-wideish text-mist/90 sm:mt-20 sm:grid-cols-3 sm:py-5">
+        <div className="mt-20 grid border-y border-line/70 py-4 text-[0.72rem] font-medium uppercase leading-6 tracking-wideish text-mist sm:mt-20 sm:grid-cols-3 sm:py-5">
           <span>Digital studio</span>
           <span className="mt-3 sm:mt-0 sm:text-center">Editorial systems</span>
           <span className="mt-3 sm:mt-0 sm:text-right">Boutique delivery</span>
@@ -268,7 +268,7 @@ export default function Home() {
                 key={step.title}
                 className="bg-ink p-7 transition duration-300 hover:bg-[#111114] lg:p-8"
               >
-                <span className="mb-12 block text-[0.68rem] uppercase tracking-wideish text-copper">
+                <span className="mb-12 block text-[0.72rem] font-medium uppercase tracking-wideish text-copper">
                   0{index + 1}
                 </span>
                 <h3 className="text-2xl font-medium">{step.title}</h3>
@@ -282,16 +282,16 @@ export default function Home() {
       <section id="contacto" className="mx-auto w-full max-w-[88rem] px-5 py-28 sm:px-8 lg:px-12 lg:py-44">
         <div className="border-y border-line/75 py-20 lg:py-28">
           <SectionLabel>Contact</SectionLabel>
-          <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-            <div>
-              <h2 className="max-w-5xl font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.98]">
+          <div className="grid gap-10 text-center lg:grid-cols-12 lg:text-left">
+            <div className="lg:col-start-3 lg:col-span-8">
+              <h2 className="mx-auto max-w-5xl font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.98] lg:mx-0">
                 ¿Tienes una marca que necesita verse más clara y profesional?
               </h2>
-              <p className="mt-8 max-w-xl text-xl font-normal leading-9 text-mist/95">
+              <p className="mx-auto mt-7 max-w-xl text-xl font-normal leading-9 text-mist/95 lg:mx-0 lg:mt-8">
                 Hablemos y definimos qué necesita primero.
               </p>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center lg:col-start-3 lg:col-span-8 lg:mt-1 lg:justify-start">
               <Button
                 href="https://wa.me/50660352525?text=Hola,%20vi%20Miveh%20Hub%20y%20me%20gustaría%20conversar%20sobre%20un%20proyecto."
                 external
