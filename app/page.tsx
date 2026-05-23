@@ -290,16 +290,16 @@ export default function Home() {
       <section id="contacto" className="mx-auto w-full max-w-[88rem] px-5 py-28 sm:px-8 lg:px-12 lg:py-44">
         <div className="border-y border-line/75 py-20 lg:py-28">
           <SectionLabel>Contact</SectionLabel>
-          <div className="grid gap-6 text-center lg:grid-cols-12 lg:gap-7 lg:text-left">
-            <div className="lg:col-start-4 lg:col-span-8">
-              <h2 className="mx-auto max-w-5xl font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.98] lg:mx-0">
+          <div className="grid gap-6 text-center lg:block">
+            <div className="lg:mx-auto lg:max-w-5xl">
+              <h2 className="mx-auto max-w-5xl font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.98]">
                 ¿Tienes una marca que necesita verse más clara y profesional?
               </h2>
-              <p className="mx-auto mt-5 max-w-xl text-xl font-normal leading-9 text-mist/95 lg:mx-0 lg:mt-6">
+              <p className="mx-auto mt-5 max-w-xl text-xl font-normal leading-9 text-mist/95 lg:mt-6">
                 Hablemos y definimos qué necesita primero.
               </p>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center lg:col-start-4 lg:col-span-8 lg:-mt-1 lg:justify-start">
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center lg:mt-6 lg:justify-center">
               <Button
                 href="https://wa.me/50660352525?text=Hola,%20vi%20Miveh%20Hub%20y%20me%20gustaría%20conversar%20sobre%20un%20proyecto."
                 external
