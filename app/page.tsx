@@ -143,7 +143,7 @@ export default function Home() {
           <img
             src="/logo-light-nav.png"
             alt="Miveh Hub"
-            className="h-[1.05rem] w-auto object-contain sm:h-[1.18rem]"
+            className="h-[1.22rem] w-auto object-contain sm:h-[1.35rem]"
           />
         </a>
         <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.82rem] font-medium tracking-[0.055em] text-mist/95 md:flex">
@@ -174,12 +174,12 @@ export default function Home() {
           <p className="mb-7 text-[0.72rem] font-medium uppercase tracking-wideish text-mist sm:mb-9 sm:text-xs">
             web + contenido + diseño
           </p>
-          <h1 className="max-w-[11ch] font-serif text-[clamp(4.25rem,12vw,9.8rem)] font-medium leading-[0.9] tracking-normal text-balance">
-            Presencia digital clara.
+          <h1 className="max-w-[11ch] font-serif text-[clamp(4.7rem,13vw,10.8rem)] font-medium leading-[0.86] tracking-normal text-balance">
+            Miveh Hub
           </h1>
           <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.2rem] font-normal leading-[1.68] text-mist/95 sm:mt-10 sm:text-[1.48rem] sm:leading-[1.58]">
-            Web, contenido y diseño para marcas que quieren verse más
-            profesionales, comunicar mejor y avanzar sin complicarse.
+            Creamos presencia digital clara, visual y alineada para marcas que
+            quieren verse más profesionales sin complicarse.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:mt-12 sm:flex-row">
             <Button href="#work">Ver proyectos</Button>
