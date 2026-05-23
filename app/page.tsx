@@ -137,15 +137,14 @@ export default function Home() {
       <header className="mx-auto flex w-full max-w-[88rem] items-center justify-between px-5 py-7 sm:px-8 lg:px-12 lg:py-9">
         <a
           href="#hero"
-          className="flex items-center gap-2.5 text-[0.84rem] font-medium tracking-wideish text-bone transition duration-300 hover:text-bone"
+          aria-label="Miveh Hub home"
+          className="flex items-center text-bone transition duration-300 hover:opacity-85"
         >
           <img
-            src="/favicon.png"
-            alt=""
-            aria-hidden="true"
-            className="h-4 w-4 opacity-80 transition duration-300 hover:opacity-100"
+            src="/logo-light-nav.png"
+            alt="Miveh Hub"
+            className="h-[1.05rem] w-auto object-contain sm:h-[1.18rem]"
           />
-          <span>Miveh Hub</span>
         </a>
         <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.82rem] font-medium tracking-[0.055em] text-mist/95 md:flex">
           {["Trabajo", "Servicios", "Proceso", "Contacto"].map((item) => (
@@ -175,12 +174,12 @@ export default function Home() {
           <p className="mb-7 text-[0.72rem] font-medium uppercase tracking-wideish text-mist sm:mb-9 sm:text-xs">
             web + contenido + diseño
           </p>
-          <h1 className="max-w-[11ch] font-serif text-[clamp(4.7rem,13vw,10.8rem)] font-medium leading-[0.86] tracking-normal text-balance">
-            Miveh Hub
+          <h1 className="max-w-[11ch] font-serif text-[clamp(4.25rem,12vw,9.8rem)] font-medium leading-[0.9] tracking-normal text-balance">
+            Presencia digital clara.
           </h1>
           <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.2rem] font-normal leading-[1.68] text-mist/95 sm:mt-10 sm:text-[1.48rem] sm:leading-[1.58]">
-            Creamos presencia digital clara, visual y alineada para marcas que
-            quieren verse más profesionales sin complicarse.
+            Web, contenido y diseño para marcas que quieren verse más
+            profesionales, comunicar mejor y avanzar sin complicarse.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:mt-12 sm:flex-row">
             <Button href="#work">Ver proyectos</Button>
@@ -316,8 +315,16 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="mx-auto flex w-full max-w-[88rem] flex-col gap-4 px-5 pb-8 text-[0.68rem] font-medium uppercase tracking-wideish text-mist/90 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
-        <span>Miveh Hub</span>
+      <footer className="mx-auto flex w-full max-w-[88rem] flex-col gap-4 px-5 pb-8 text-[0.68rem] font-medium uppercase tracking-wideish text-bone/70 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
+        <span className="flex items-center gap-2.5">
+          <img
+            src="/grape-icon.png"
+            alt=""
+            aria-hidden="true"
+            className="h-4 w-4 opacity-75"
+          />
+          Miveh Hub
+        </span>
         <span>web + contenido + diseño</span>
       </footer>
     </main>
