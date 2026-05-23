@@ -50,31 +50,31 @@ const workLayouts = [
   {
     card: "lg:col-span-12 lg:min-h-[29rem]",
     inner: "lg:grid-cols-[minmax(0,0.95fr)_minmax(26rem,0.85fr)] lg:items-end",
-    title: "lg:text-[5.8rem]",
+    title: "lg:text-[5.2rem]",
     description: "lg:self-end",
   },
   {
     card: "lg:col-span-7 lg:min-h-[25rem]",
     inner: "lg:min-h-[18rem]",
-    title: "lg:text-[4.6rem]",
+    title: "lg:text-[4.15rem]",
     description: "",
   },
   {
     card: "lg:col-span-5 lg:min-h-[25rem]",
     inner: "lg:min-h-[18rem]",
-    title: "lg:text-[3.8rem]",
+    title: "lg:text-[3.45rem]",
     description: "",
   },
   {
     card: "lg:col-span-5 lg:min-h-[25rem]",
     inner: "lg:min-h-[18rem]",
-    title: "lg:text-[3.8rem]",
+    title: "lg:text-[3.45rem]",
     description: "",
   },
   {
     card: "lg:col-span-7 lg:min-h-[25rem]",
     inner: "lg:min-h-[18rem]",
-    title: "lg:text-[4.6rem]",
+    title: "lg:text-[4.15rem]",
     description: "",
   },
 ];
@@ -96,7 +96,7 @@ const process = [
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-10 flex items-center gap-3 text-[0.72rem] font-medium uppercase leading-none tracking-wideish text-mist/95 sm:mb-12">
+    <p className="mb-10 flex items-center gap-3 text-[0.72rem] font-medium uppercase leading-none tracking-wideish text-bone/70 sm:mb-12">
       <span className="h-px w-6 bg-lime/70" />
       {children}
     </p>
@@ -146,7 +146,7 @@ export default function Home() {
             className="h-[1.22rem] w-auto object-contain sm:h-[1.35rem]"
           />
         </a>
-        <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.82rem] font-medium tracking-[0.055em] text-mist/95 md:flex">
+        <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.82rem] font-medium tracking-[0.055em] text-bone/70 md:flex">
           {["Trabajo", "Servicios", "Proceso", "Contacto"].map((item) => (
             <a
               key={item}
@@ -171,10 +171,10 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl">
-          <p className="mb-7 text-[0.72rem] font-medium uppercase tracking-wideish text-mist sm:mb-9 sm:text-xs">
+          <p className="mb-7 text-[0.72rem] font-medium uppercase tracking-wideish text-bone/70 sm:mb-9 sm:text-xs">
             web + contenido + diseño
           </p>
-          <h1 className="max-w-[11ch] font-serif text-[clamp(4.7rem,13vw,10.8rem)] font-medium leading-[0.86] tracking-normal text-balance">
+          <h1 className="max-w-[11ch] font-serif text-[clamp(4.35rem,11.5vw,9.6rem)] font-medium leading-[0.88] tracking-normal text-balance">
             Miveh Hub
           </h1>
           <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.2rem] font-normal leading-[1.68] text-mist/95 sm:mt-10 sm:text-[1.48rem] sm:leading-[1.58]">
@@ -189,7 +189,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-20 grid border-y border-line/70 py-4 text-[0.72rem] font-medium uppercase leading-6 tracking-wideish text-mist sm:mt-20 sm:grid-cols-3 sm:py-5">
+        <div className="mt-20 grid border-y border-line/70 py-4 text-[0.72rem] font-medium uppercase leading-6 tracking-wideish text-bone/65 sm:mt-20 sm:grid-cols-3 sm:py-5">
           <span>Digital studio</span>
           <span className="mt-3 sm:mt-0 sm:text-center">Editorial systems</span>
           <span className="mt-3 sm:mt-0 sm:text-right">Boutique delivery</span>
@@ -199,7 +199,7 @@ export default function Home() {
       <section id="work" className="mx-auto w-full max-w-[88rem] px-5 pb-32 pt-24 sm:px-8 lg:px-12 lg:pb-52 lg:pt-36">
         <SectionLabel>Selected Work</SectionLabel>
         <div className="mb-16 grid gap-9 sm:mb-20 lg:grid-cols-[1fr_27rem] lg:items-end">
-          <h2 className="max-w-4xl font-serif text-[clamp(3.8rem,8vw,7.7rem)] leading-[0.9] text-balance">
+          <h2 className="max-w-4xl font-serif text-[clamp(3.35rem,7vw,6.6rem)] leading-[0.92] text-balance">
             Selected Work
           </h2>
           <p className="max-w-[25rem] text-[1rem] font-normal leading-[1.85] text-mist/95 lg:pb-4">
@@ -221,7 +221,7 @@ export default function Home() {
                   <p className="mb-16 text-[0.68rem] font-medium uppercase tracking-wideish text-bone/55 transition duration-300 group-hover:text-bone/75 sm:mb-20">
                     {project.type}
                   </p>
-                  <h3 className={`max-w-[12ch] text-[clamp(2.35rem,6.5vw,4.85rem)] font-medium leading-[0.96] text-bone ${layout.title}`}>
+                  <h3 className={`max-w-[12ch] text-[clamp(2.2rem,5.8vw,4.3rem)] font-medium leading-[0.98] text-bone ${layout.title}`}>
                     {project.name}
                   </h3>
                 </div>
@@ -243,7 +243,7 @@ export default function Home() {
       <section id="servicios" className="mx-auto w-full max-w-[88rem] border-t border-line/60 px-5 pb-32 pt-24 sm:px-8 lg:px-12 lg:pb-52 lg:pt-32">
         <SectionLabel>Services</SectionLabel>
         <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-24">
-          <h2 className="max-w-xl font-serif text-[clamp(3rem,7vw,5.8rem)] leading-[0.96]">
+          <h2 className="max-w-xl font-serif text-[clamp(2.75rem,6vw,5.1rem)] leading-[0.98]">
             Sistemas claros para marcas con más criterio.
           </h2>
           <div className="grid border-y border-line/75">
@@ -267,7 +267,7 @@ export default function Home() {
       <section id="proceso" className="mx-auto w-full max-w-[88rem] px-5 py-28 sm:px-8 lg:px-12 lg:py-44">
         <SectionLabel>Process</SectionLabel>
         <div className="grid gap-14 lg:grid-cols-[1fr_1.45fr] lg:gap-24">
-          <h2 className="max-w-xl font-serif text-[clamp(3rem,7vw,5.8rem)] leading-[0.96]">
+          <h2 className="max-w-xl font-serif text-[clamp(2.75rem,6vw,5.1rem)] leading-[0.98]">
             Menos ruido. Más intención.
           </h2>
           <div className="grid gap-px border-y border-line/80 bg-line/80 md:grid-cols-3 md:border">
@@ -292,7 +292,7 @@ export default function Home() {
           <SectionLabel>Contact</SectionLabel>
           <div className="grid gap-6 text-center lg:block">
             <div className="lg:mx-auto lg:max-w-5xl">
-              <h2 className="mx-auto max-w-5xl font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.98]">
+              <h2 className="mx-auto max-w-5xl font-serif text-[clamp(2.75rem,6.2vw,5.7rem)] leading-[1]">
                 ¿Tienes una marca que necesita verse más clara y profesional?
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-xl font-normal leading-9 text-mist/95 lg:mt-6">
