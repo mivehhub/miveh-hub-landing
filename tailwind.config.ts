@@ -12,9 +12,7 @@ const config: Config = {
         bone: "#F4F1EA",
         mist: "#A7A7A7",
         line: "#242428",
-        navy: "#1A2852",
-        lime: "#B0D241",
-        copper: "#E18426",
+        purple: "#683A96",
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],

@@ -97,7 +97,7 @@ const process = [
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p className="mb-10 flex items-center gap-3 text-[0.72rem] font-medium uppercase leading-none tracking-wideish text-bone/70 sm:mb-12">
-      <span className="h-px w-6 bg-lime/70" />
+      <span className="h-px w-6 bg-purple/75" />
       {children}
     </p>
   );
@@ -116,8 +116,8 @@ function Button({
 }) {
   const styles =
     variant === "primary"
-      ? "border-bone bg-bone text-ink hover:border-bone/80 hover:bg-transparent hover:text-bone"
-      : "border-line bg-[#111114] text-bone/90 hover:border-bone/35 hover:bg-[#151518] hover:text-bone";
+      ? "border-bone bg-bone text-ink hover:border-purple/70 hover:bg-transparent hover:text-bone"
+      : "border-line bg-[#111114] text-bone/90 hover:border-purple/60 hover:bg-[#151518] hover:text-bone";
 
   return (
     <a
@@ -164,17 +164,11 @@ export default function Home() {
         className="relative mx-auto grid min-h-[calc(86vh-5.75rem)] w-full max-w-[88rem] content-center px-5 pb-16 pt-14 sm:px-8 sm:pt-20 lg:min-h-[calc(88vh-6.5rem)] lg:px-12 lg:pt-24"
       >
         <div className="absolute right-5 top-20 hidden h-28 w-px bg-line/70 md:block" />
-        <div className="absolute bottom-20 right-5 hidden gap-2 md:flex">
-          <span className="h-1.5 w-1.5 bg-navy" />
-          <span className="h-1.5 w-1.5 bg-lime" />
-          <span className="h-1.5 w-1.5 bg-copper" />
-        </div>
-
         <div className="max-w-6xl">
           <p className="mb-7 text-[0.72rem] font-medium uppercase tracking-wideish text-bone/70 sm:mb-9 sm:text-xs">
             web + contenido + diseño
           </p>
-          <h1 className="max-w-[11ch] font-serif text-[clamp(4.35rem,11.5vw,9.6rem)] font-medium leading-[0.88] tracking-normal text-balance">
+          <h1 className="max-w-[11ch] font-serif text-[clamp(4.15rem,10.8vw,9rem)] font-medium leading-[0.9] tracking-normal text-balance">
             Miveh Hub
           </h1>
           <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.2rem] font-normal leading-[1.68] text-mist/95 sm:mt-10 sm:text-[1.48rem] sm:leading-[1.58]">
@@ -199,7 +193,7 @@ export default function Home() {
       <section id="work" className="mx-auto w-full max-w-[88rem] px-5 pb-32 pt-24 sm:px-8 lg:px-12 lg:pb-52 lg:pt-36">
         <SectionLabel>Selected Work</SectionLabel>
         <div className="mb-16 grid gap-9 sm:mb-20 lg:grid-cols-[1fr_27rem] lg:items-end">
-          <h2 className="max-w-4xl font-serif text-[clamp(3.35rem,7vw,6.6rem)] leading-[0.92] text-balance">
+          <h2 className="max-w-4xl font-serif text-[clamp(3.2rem,6.4vw,6.1rem)] leading-[0.94] text-balance">
             Selected Work
           </h2>
           <p className="max-w-[25rem] text-[1rem] font-normal leading-[1.85] text-mist/95 lg:pb-4">
@@ -214,7 +208,7 @@ export default function Home() {
             return (
             <article
               key={project.name}
-              className={`group relative overflow-hidden border border-line/75 bg-[#101013] px-6 py-9 transition duration-300 ease-out hover:-translate-y-0.5 hover:border-bone/25 hover:bg-[#121215] sm:px-8 sm:py-11 lg:px-11 lg:py-12 ${layout.card}`}
+              className={`group relative overflow-hidden border border-line/75 bg-[#101013] px-6 py-9 transition duration-300 ease-out hover:-translate-y-0.5 hover:border-purple/35 hover:bg-[#121215] sm:px-8 sm:py-11 lg:px-11 lg:py-12 ${layout.card}`}
             >
               <div className={`flex h-full flex-col justify-between gap-16 ${layout.inner}`}>
                 <div>
@@ -229,7 +223,7 @@ export default function Home() {
                   <p className="text-base font-normal leading-8 text-mist/95 transition duration-300 group-hover:text-bone">
                     {project.detail}
                   </p>
-                  <p className="mt-8 inline-flex border-b border-bone/20 pb-1 text-[0.68rem] font-medium uppercase tracking-wideish text-bone/55 transition duration-300 group-hover:border-bone/40 group-hover:text-bone/80">
+                  <p className="mt-8 inline-flex border-b border-purple/35 pb-1 text-[0.68rem] font-medium uppercase tracking-wideish text-bone/55 transition duration-300 group-hover:border-purple/75 group-hover:text-bone/80">
                     Explore
                   </p>
                 </div>
@@ -243,7 +237,7 @@ export default function Home() {
       <section id="servicios" className="mx-auto w-full max-w-[88rem] border-t border-line/60 px-5 pb-32 pt-24 sm:px-8 lg:px-12 lg:pb-52 lg:pt-32">
         <SectionLabel>Services</SectionLabel>
         <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-24">
-          <h2 className="max-w-xl font-serif text-[clamp(2.75rem,6vw,5.1rem)] leading-[0.98]">
+          <h2 className="max-w-xl font-serif text-[clamp(2.6rem,5.5vw,4.75rem)] leading-[1]">
             Sistemas claros para marcas con más criterio.
           </h2>
           <div className="grid border-y border-line/75">
@@ -267,7 +261,7 @@ export default function Home() {
       <section id="proceso" className="mx-auto w-full max-w-[88rem] px-5 py-28 sm:px-8 lg:px-12 lg:py-44">
         <SectionLabel>Process</SectionLabel>
         <div className="grid gap-14 lg:grid-cols-[1fr_1.45fr] lg:gap-24">
-          <h2 className="max-w-xl font-serif text-[clamp(2.75rem,6vw,5.1rem)] leading-[0.98]">
+          <h2 className="max-w-xl font-serif text-[clamp(2.6rem,5.5vw,4.75rem)] leading-[1]">
             Menos ruido. Más intención.
           </h2>
           <div className="grid gap-px border-y border-line/80 bg-line/80 md:grid-cols-3 md:border">
@@ -276,7 +270,7 @@ export default function Home() {
                 key={step.title}
                 className="bg-ink p-7 transition duration-300 hover:bg-[#111114] lg:p-8"
               >
-                <span className="mb-12 block text-[0.72rem] font-medium uppercase tracking-wideish text-copper">
+                <span className="mb-12 block text-[0.72rem] font-medium uppercase tracking-wideish text-purple">
                   0{index + 1}
                 </span>
                 <h3 className="text-2xl font-medium">{step.title}</h3>
@@ -292,7 +286,7 @@ export default function Home() {
           <SectionLabel>Contact</SectionLabel>
           <div className="grid gap-6 text-center lg:block">
             <div className="lg:mx-auto lg:max-w-5xl">
-              <h2 className="mx-auto max-w-5xl font-serif text-[clamp(2.75rem,6.2vw,5.7rem)] leading-[1]">
+              <h2 className="mx-auto max-w-5xl font-serif text-[clamp(2.55rem,5.6vw,5.15rem)] leading-[1.02]">
                 ¿Tienes una marca que necesita verse más clara y profesional?
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-xl font-normal leading-9 text-mist/95 lg:mt-6">
