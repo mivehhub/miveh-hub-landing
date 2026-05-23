@@ -96,7 +96,7 @@ const process = [
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-10 flex items-center gap-3 text-[0.72rem] font-medium uppercase leading-none tracking-wideish text-mist sm:mb-12">
+    <p className="mb-10 flex items-center gap-3 text-[0.72rem] font-medium uppercase leading-none tracking-wideish text-mist/95 sm:mb-12">
       <span className="h-px w-6 bg-lime/70" />
       {children}
     </p>
@@ -135,10 +135,19 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-ink text-bone">
       <header className="mx-auto flex w-full max-w-[88rem] items-center justify-between px-5 py-7 sm:px-8 lg:px-12 lg:py-9">
-        <a href="#hero" className="text-[0.82rem] font-medium tracking-wideish text-bone transition duration-300 hover:text-bone">
-          Miveh Hub
+        <a
+          href="#hero"
+          className="flex items-center gap-2.5 text-[0.84rem] font-medium tracking-wideish text-bone transition duration-300 hover:text-bone"
+        >
+          <img
+            src="/favicon.png"
+            alt=""
+            aria-hidden="true"
+            className="h-4 w-4 opacity-80 transition duration-300 hover:opacity-100"
+          />
+          <span>Miveh Hub</span>
         </a>
-        <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.8rem] font-medium tracking-[0.055em] text-mist md:flex">
+        <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.82rem] font-medium tracking-[0.055em] text-mist/95 md:flex">
           {["Trabajo", "Servicios", "Proceso", "Contacto"].map((item) => (
             <a
               key={item}
@@ -169,7 +178,7 @@ export default function Home() {
           <h1 className="max-w-[11ch] font-serif text-[clamp(4.7rem,13vw,10.8rem)] font-medium leading-[0.86] tracking-normal text-balance">
             Miveh Hub
           </h1>
-          <p className="mt-8 max-w-[39rem] text-[1.2rem] font-normal leading-[1.64] text-mist sm:mt-10 sm:text-[1.48rem] sm:leading-[1.55]">
+          <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.2rem] font-normal leading-[1.68] text-mist/95 sm:mt-10 sm:text-[1.48rem] sm:leading-[1.58]">
             Creamos presencia digital clara, visual y alineada para marcas que
             quieren verse más profesionales sin complicarse.
           </p>
@@ -282,16 +291,16 @@ export default function Home() {
       <section id="contacto" className="mx-auto w-full max-w-[88rem] px-5 py-28 sm:px-8 lg:px-12 lg:py-44">
         <div className="border-y border-line/75 py-20 lg:py-28">
           <SectionLabel>Contact</SectionLabel>
-          <div className="grid gap-10 text-center lg:grid-cols-12 lg:text-left">
-            <div className="lg:col-start-3 lg:col-span-8">
+          <div className="grid gap-6 text-center lg:grid-cols-12 lg:gap-7 lg:text-left">
+            <div className="lg:col-start-4 lg:col-span-8">
               <h2 className="mx-auto max-w-5xl font-serif text-[clamp(3rem,7vw,6.5rem)] leading-[0.98] lg:mx-0">
                 ¿Tienes una marca que necesita verse más clara y profesional?
               </h2>
-              <p className="mx-auto mt-7 max-w-xl text-xl font-normal leading-9 text-mist/95 lg:mx-0 lg:mt-8">
+              <p className="mx-auto mt-5 max-w-xl text-xl font-normal leading-9 text-mist/95 lg:mx-0 lg:mt-6">
                 Hablemos y definimos qué necesita primero.
               </p>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center lg:col-start-3 lg:col-span-8 lg:mt-1 lg:justify-start">
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center lg:col-start-4 lg:col-span-8 lg:-mt-1 lg:justify-start">
               <Button
                 href="https://wa.me/50660352525?text=Hola,%20vi%20Miveh%20Hub%20y%20me%20gustaría%20conversar%20sobre%20un%20proyecto."
                 external

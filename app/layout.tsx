@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: "Miveh Hub | Web + contenido + diseño",
   description:
     "Boutique digital studio focused on web, content and design for brands that want a clearer digital presence.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
