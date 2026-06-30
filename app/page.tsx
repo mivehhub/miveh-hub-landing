@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const services = [
   {
     title: "Web",
@@ -104,17 +106,19 @@ export default function Home() {
           aria-label="Miveh Hub home"
           className="flex items-center text-white transition duration-300 hover:opacity-85"
         >
-          <img
+          <Image
             src="/logo-light-nav.png"
             alt="Miveh Hub"
+            width={200}
+            height={24}
             className="h-[1.22rem] w-auto object-contain sm:h-[1.35rem] md:h-[1.7rem]"
           />
         </a>
         <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.82rem] font-medium tracking-[0.055em] text-white/50 md:flex">
-          {["Trabajo", "Servicios", "Proceso", "Contacto"].map((item) => (
+          {["Servicios", "Proceso", "Proyectos", "Contacto"].map((item) => (
             <a
               key={item}
-              href={`#${item === "Trabajo" ? "work" : item.toLowerCase()}`}
+              href={`#${item === "Proyectos" ? "work" : item.toLowerCase()}`}
               className="transition duration-300 hover:text-white"
             >
               {item}
@@ -224,7 +228,7 @@ export default function Home() {
       </section>
 
       <section id="proceso" className="mx-auto w-full max-w-[88rem] px-5 py-28 sm:px-8 lg:px-12 lg:py-44">
-        <SectionLabel>Process</SectionLabel>
+        <SectionLabel>Proceso</SectionLabel>
         <div className="grid gap-14 lg:grid-cols-[1fr_1.45fr] lg:gap-24">
           <h2 className="max-w-xl font-sans text-[clamp(2.6rem,5.5vw,4.75rem)] leading-[1]">
             Menos ruido. Más intención.
