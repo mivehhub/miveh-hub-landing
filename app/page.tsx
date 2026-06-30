@@ -15,28 +15,10 @@ const services = [
 
 const work = [
   {
-    name: "NAOS",
-    type: "Dirección visual",
-    detail:
-      "Dirección visual y estructura de contenido para elevar la presencia digital de una marca en crecimiento.",
-  },
-  {
     name: "Three29 Partners",
     type: "Landing corporativa",
     detail:
       "Landing corporativa minimal para una firma boutique enfocada en desarrollo de negocios y tecnología.",
-  },
-  {
-    name: "ENM Propiedades",
-    type: "Presencia digital",
-    detail:
-      "Presencia digital inicial para comunicar propiedades con claridad, confianza y criterio visual.",
-  },
-  {
-    name: "Tico Stick",
-    type: "Dirección de marca",
-    detail:
-      "Concepto visual, empaque y dirección de marca para un producto físico con enfoque lifestyle.",
   },
   {
     name: "Parfectionist",
@@ -48,33 +30,15 @@ const work = [
 
 const workLayouts = [
   {
-    card: "lg:col-span-12 lg:min-h-[29rem]",
-    inner: "lg:grid-cols-[minmax(0,0.95fr)_minmax(26rem,0.85fr)] lg:items-end",
-    title: "lg:text-[5.2rem]",
-    description: "lg:self-end",
-  },
-  {
-    card: "lg:col-span-7 lg:min-h-[25rem]",
-    inner: "lg:min-h-[18rem]",
-    title: "lg:text-[4.15rem]",
+    card: "lg:col-span-7 lg:min-h-[30rem]",
+    inner: "lg:min-h-[22rem]",
+    title: "lg:text-[4.5rem]",
     description: "",
   },
   {
-    card: "lg:col-span-5 lg:min-h-[25rem]",
-    inner: "lg:min-h-[18rem]",
-    title: "lg:text-[3.45rem]",
-    description: "",
-  },
-  {
-    card: "lg:col-span-5 lg:min-h-[25rem]",
-    inner: "lg:min-h-[18rem]",
-    title: "lg:text-[3.45rem]",
-    description: "",
-  },
-  {
-    card: "lg:col-span-7 lg:min-h-[25rem]",
-    inner: "lg:min-h-[18rem]",
-    title: "lg:text-[4.15rem]",
+    card: "lg:col-span-5 lg:min-h-[30rem]",
+    inner: "lg:min-h-[22rem]",
+    title: "lg:text-[3.8rem]",
     description: "",
   },
 ];
@@ -117,7 +81,7 @@ function Button({
   const styles =
     variant === "primary"
       ? "border-white bg-white text-ink hover:border-purple/70 hover:bg-transparent hover:text-white"
-      : "border-white/[0.15] bg-transparent text-white/90 hover:border-purple/60 hover:bg-deep hover:text-white";
+      : "border-white/[0.15] bg-transparent text-white hover:border-purple/60 hover:bg-deep hover:text-white";
 
   return (
     <a
@@ -168,10 +132,11 @@ export default function Home() {
           <p className="mb-7 text-[0.72rem] font-medium uppercase tracking-wideish text-white/50 sm:mb-9 sm:text-xs">
             web + contenido + diseño
           </p>
-          <h1 className="max-w-[11ch] font-sans text-[clamp(4.15rem,9.5vw,8rem)] font-medium leading-[0.9] tracking-normal text-balance">
-            Miveh Hub
+          <h1 className="max-w-[11ch] font-sans text-[clamp(4.15rem,9.5vw,8rem)] leading-[0.9] tracking-normal text-balance">
+            <span className="font-medium">miveh</span>{" "}
+            <span className="font-extralight">hub</span>
           </h1>
-          <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.2rem] font-normal leading-[1.68] text-white/50 sm:mt-10 sm:text-[1.48rem] sm:leading-[1.58]">
+          <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.2rem] font-extralight leading-[1.68] text-white/50 sm:mt-10 sm:text-[1.48rem] sm:leading-[1.58]">
             Creamos presencia digital clara, visual y alineada para marcas que
             quieren verse más profesionales sin complicarse.
           </p>
@@ -191,12 +156,12 @@ export default function Home() {
       </section>
 
       <section id="work" className="mx-auto w-full max-w-[88rem] px-5 pb-32 pt-24 sm:px-8 lg:px-12 lg:pb-52 lg:pt-36">
-        <SectionLabel>Selected Work</SectionLabel>
+        <SectionLabel>Proyectos</SectionLabel>
         <div className="mb-16 grid gap-9 sm:mb-20 lg:grid-cols-[1fr_27rem] lg:items-end">
           <h2 className="max-w-4xl font-sans text-[clamp(3.2rem,6.4vw,6.1rem)] leading-[0.94] text-balance">
-            Selected Work
+            Proyectos
           </h2>
-          <p className="max-w-[25rem] text-[1rem] font-normal leading-[1.85] text-white/50 lg:pb-4">
+          <p className="max-w-[25rem] text-[1rem] font-extralight leading-[1.85] text-white/50 lg:pb-4">
             Una selección de sistemas visuales, landings y direcciones de contenido diseñados con claridad y criterio comercial.
           </p>
         </div>
@@ -220,7 +185,7 @@ export default function Home() {
                   </h3>
                 </div>
                 <div className={`max-w-xl ${layout.description}`}>
-                  <p className="text-base font-normal leading-8 text-white/50 transition duration-300 group-hover:text-white">
+                  <p className="text-base font-extralight leading-8 text-white/50 transition duration-300 group-hover:text-white">
                     {project.detail}
                   </p>
                   <p className="mt-8 inline-flex border-b border-purple/35 pb-1 text-[0.68rem] font-medium uppercase tracking-wideish text-white/50 transition duration-300 group-hover:border-purple/75 group-hover:text-white/70">
@@ -235,7 +200,7 @@ export default function Home() {
       </section>
 
       <section id="servicios" className="mx-auto w-full max-w-[88rem] border-t border-white/[0.08] px-5 pb-32 pt-24 sm:px-8 lg:px-12 lg:pb-52 lg:pt-32">
-        <SectionLabel>Services</SectionLabel>
+        <SectionLabel>Servicios</SectionLabel>
         <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-24">
           <h2 className="max-w-xl font-sans text-[clamp(2.6rem,5.5vw,4.75rem)] leading-[1]">
             Sistemas claros para marcas con más criterio.
@@ -249,7 +214,7 @@ export default function Home() {
                 <h3 className="text-lg font-medium text-white">
                   {service.title}
                 </h3>
-                <p className="max-w-2xl text-base font-normal leading-8 text-white/50 transition duration-300 group-hover:text-white">
+                <p className="max-w-2xl text-base font-extralight leading-8 text-white/50 transition duration-300 group-hover:text-white">
                   {service.copy}
                 </p>
               </article>
@@ -274,7 +239,7 @@ export default function Home() {
                   0{index + 1}
                 </span>
                 <h3 className="text-2xl font-medium">{step.title}</h3>
-                <p className="mt-5 text-sm font-normal leading-7 text-white/50">{step.copy}</p>
+                <p className="mt-5 text-sm font-extralight leading-7 text-white/50">{step.copy}</p>
               </article>
             ))}
           </div>
@@ -283,13 +248,13 @@ export default function Home() {
 
       <section id="contacto" className="mx-auto w-full max-w-[88rem] px-5 py-28 sm:px-8 lg:px-12 lg:py-44">
         <div className="border-y border-white/[0.1] py-20 lg:py-28">
-          <SectionLabel>Contact</SectionLabel>
+          <SectionLabel>Contacto</SectionLabel>
           <div className="grid gap-6 text-center lg:block">
             <div className="lg:mx-auto lg:max-w-5xl">
               <h2 className="mx-auto max-w-5xl font-sans text-[clamp(2.55rem,4.75vw,4.4rem)] leading-[1.02]">
                 ¿Tienes una marca que necesita verse más clara y profesional?
               </h2>
-              <p className="mx-auto mt-5 max-w-xl text-xl font-normal leading-9 text-white/50 lg:mt-6">
+              <p className="mx-auto mt-5 max-w-xl text-xl font-extralight leading-9 text-white/50 lg:mt-6">
                 Hablemos y definimos qué necesita primero.
               </p>
             </div>
