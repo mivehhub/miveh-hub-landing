@@ -109,8 +109,9 @@ export default function Home() {
           <Image
             src="/logo-light-nav.png"
             alt="Miveh Hub"
-            width={200}
-            height={24}
+            width={6667}
+            height={987}
+            priority
             className="h-[1.22rem] w-auto object-contain sm:h-[1.35rem] md:h-[1.7rem]"
           />
         </a>
