@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const services = [
   {
     title: "Web",
@@ -101,20 +99,7 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-ink text-white">
       <header className="mx-auto flex w-full max-w-[88rem] items-center justify-between px-5 py-7 sm:px-8 lg:px-12 lg:py-9">
-        <a
-          href="#hero"
-          aria-label="Miveh Hub home"
-          className="flex items-center text-white transition duration-300 hover:opacity-85"
-        >
-          <Image
-            src="/logo-light-nav.png"
-            alt="Miveh Hub"
-            width={6667}
-            height={987}
-            priority
-            className="h-[1.22rem] w-auto object-contain sm:h-[1.35rem] md:h-[1.7rem]"
-          />
-        </a>
+        <a href="#hero" className="font-sans text-sm font-light lowercase tracking-widest text-white transition duration-300 hover:opacity-85">miveh hub</a>
         <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.82rem] font-medium tracking-[0.055em] text-white/50 md:flex">
           {["Servicios", "Proceso", "Proyectos", "Contacto"].map((item) => (
             <a
@@ -157,50 +142,6 @@ export default function Home() {
           <span>Digital studio</span>
           <span className="mt-3 sm:mt-0 sm:text-center">Editorial systems</span>
           <span className="mt-3 sm:mt-0 sm:text-right">Boutique delivery</span>
-        </div>
-      </section>
-
-      <section id="work" className="mx-auto w-full max-w-[88rem] px-5 pb-32 pt-24 sm:px-8 lg:px-12 lg:pb-52 lg:pt-36">
-        <SectionLabel>Proyectos</SectionLabel>
-        <div className="mb-16 grid gap-9 sm:mb-20 lg:grid-cols-[1fr_27rem] lg:items-end">
-          <h2 className="max-w-4xl font-sans text-[clamp(3.2rem,6.4vw,6.1rem)] leading-[0.94] text-balance">
-            Proyectos
-          </h2>
-          <p className="max-w-[25rem] text-[1rem] font-extralight leading-[1.85] text-white/50 lg:pb-4">
-            Una selección de sistemas visuales, landings y direcciones de contenido diseñados con claridad y criterio comercial.
-          </p>
-        </div>
-
-        <div className="grid gap-6 lg:grid-cols-12 lg:gap-6">
-          {work.map((project, index) => {
-            const layout = workLayouts[index];
-
-            return (
-            <article
-              key={project.name}
-              className={`group relative overflow-hidden border border-white/[0.1] bg-ink px-6 py-9 transition duration-300 ease-out hover:-translate-y-0.5 hover:border-purple/35 hover:bg-deep sm:px-8 sm:py-11 lg:px-11 lg:py-12 ${layout.card}`}
-            >
-              <div className={`flex h-full flex-col justify-between gap-16 ${layout.inner}`}>
-                <div>
-                  <p className="mb-16 text-[0.68rem] font-medium uppercase tracking-wideish text-white/50 transition duration-300 group-hover:text-white/70 sm:mb-20">
-                    {project.type}
-                  </p>
-                  <h3 className={`max-w-[12ch] text-[clamp(2.2rem,5.8vw,4.3rem)] font-medium leading-[0.98] text-white ${layout.title}`}>
-                    {project.name}
-                  </h3>
-                </div>
-                <div className={`max-w-xl ${layout.description}`}>
-                  <p className="text-base font-extralight leading-8 text-white/50 transition duration-300 group-hover:text-white">
-                    {project.detail}
-                  </p>
-                  <p className="mt-8 inline-flex border-b border-purple/35 pb-1 text-[0.68rem] font-medium uppercase tracking-wideish text-white/50 transition duration-300 group-hover:border-purple/75 group-hover:text-white/70">
-                    Explorar
-                  </p>
-                </div>
-              </div>
-            </article>
-            );
-          })}
         </div>
       </section>
 
@@ -248,6 +189,50 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="work" className="mx-auto w-full max-w-[88rem] px-5 pb-32 pt-24 sm:px-8 lg:px-12 lg:pb-52 lg:pt-36">
+        <SectionLabel>Proyectos</SectionLabel>
+        <div className="mb-16 grid gap-9 sm:mb-20 lg:grid-cols-[1fr_27rem] lg:items-end">
+          <h2 className="max-w-4xl font-sans text-[clamp(3.2rem,6.4vw,6.1rem)] leading-[0.94] text-balance">
+            Proyectos
+          </h2>
+          <p className="max-w-[25rem] text-[1rem] font-extralight leading-[1.85] text-white/50 lg:pb-4">
+            Una selección de sistemas visuales, landings y direcciones de contenido diseñados con claridad y criterio comercial.
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-12 lg:gap-6">
+          {work.map((project, index) => {
+            const layout = workLayouts[index];
+
+            return (
+            <article
+              key={project.name}
+              className={`group relative overflow-hidden border border-white/[0.1] bg-ink px-6 py-9 transition duration-300 ease-out hover:-translate-y-0.5 hover:border-purple/35 hover:bg-deep sm:px-8 sm:py-11 lg:px-11 lg:py-12 ${layout.card}`}
+            >
+              <div className={`flex h-full flex-col justify-between gap-16 ${layout.inner}`}>
+                <div>
+                  <p className="mb-16 text-[0.68rem] font-medium uppercase tracking-wideish text-white/50 transition duration-300 group-hover:text-white/70 sm:mb-20">
+                    {project.type}
+                  </p>
+                  <h3 className={`max-w-[12ch] text-[clamp(2.2rem,5.8vw,4.3rem)] font-medium leading-[0.98] text-white ${layout.title}`}>
+                    {project.name}
+                  </h3>
+                </div>
+                <div className={`max-w-xl ${layout.description}`}>
+                  <p className="text-base font-extralight leading-8 text-white/50 transition duration-300 group-hover:text-white">
+                    {project.detail}
+                  </p>
+                  <p className="mt-8 inline-flex border-b border-purple/35 pb-1 text-[0.68rem] font-medium uppercase tracking-wideish text-white/50 transition duration-300 group-hover:border-purple/75 group-hover:text-white/70">
+                    Explorar
+                  </p>
+                </div>
+              </div>
+            </article>
+            );
+          })}
         </div>
       </section>
 
