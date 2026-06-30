@@ -9,14 +9,11 @@ const config: Config = {
     extend: {
       colors: {
         ink: "#0E0E11",
-        bone: "#F4F1EA",
-        mist: "#A7A7A7",
-        line: "#242428",
-        purple: "#683A96",
+        purple: "#683695",
+        deep: "#251549",
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
-        serif: ["Georgia", "Times New Roman", "serif"],
+        sans: ["var(--font-outfit)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       letterSpacing: {
         wideish: "0.08em",
