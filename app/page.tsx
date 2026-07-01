@@ -130,7 +130,7 @@ export default function Home() {
             width={420}
             height={62}
             priority
-            className="w-[374px] md:w-[605px] mb-6"
+            className="w-[449px] md:w-[726px] mb-6"
           />
           <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.02rem] font-extralight leading-[1.68] text-white/50 sm:mt-10 sm:text-[1.26rem] sm:leading-[1.58]">
             Creamos presencia digital clara, visual y alineada para marcas que
