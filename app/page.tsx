@@ -132,7 +132,7 @@ export default function Home() {
             priority
             className="w-[449px] md:w-[726px] mb-6"
           />
-          <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.02rem] font-extralight leading-[1.68] text-white/50 sm:mt-10 sm:text-[1.26rem] sm:leading-[1.58]">
+          <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.02rem] font-extralight leading-[1.68] text-white/75 sm:mt-10 sm:text-[1.26rem] sm:leading-[1.58]">
             Creamos presencia digital clara, visual y alineada para marcas que
             quieren verse más profesionales sin complicarse.
           </p>
@@ -166,7 +166,7 @@ export default function Home() {
                 <h3 className="text-lg font-medium text-white">
                   {service.title}
                 </h3>
-                <p className="max-w-2xl text-base font-extralight leading-8 text-white/50 transition duration-300 group-hover:text-white">
+                <p className="max-w-2xl text-base font-extralight leading-8 text-white/75 transition duration-300 group-hover:text-white">
                   {service.copy}
                 </p>
               </article>
@@ -191,7 +191,7 @@ export default function Home() {
                   0{index + 1}
                 </span>
                 <h3 className="text-2xl font-medium">{step.title}</h3>
-                <p className="mt-5 text-sm font-extralight leading-7 text-white/50">{step.copy}</p>
+                <p className="mt-5 text-sm font-extralight leading-7 text-white/75">{step.copy}</p>
               </article>
             ))}
           </div>
@@ -204,7 +204,7 @@ export default function Home() {
           <h2 className="max-w-4xl font-sans text-[clamp(3.2rem,6.4vw,6.1rem)] leading-[0.94] text-balance">
             Proyectos
           </h2>
-          <p className="max-w-[25rem] text-[1rem] font-extralight leading-[1.85] text-white/50 lg:pb-4">
+          <p className="max-w-[25rem] text-[1rem] font-extralight leading-[1.85] text-white/75 lg:pb-4">
             Una selección de sistemas visuales, landings y direcciones de contenido diseñados con claridad y criterio comercial.
           </p>
         </div>
@@ -228,7 +228,7 @@ export default function Home() {
                   </h3>
                 </div>
                 <div className={`max-w-xl ${layout.description}`}>
-                  <p className="text-base font-extralight leading-8 text-white/50 transition duration-300 group-hover:text-white">
+                  <p className="text-base font-extralight leading-8 text-white/75 transition duration-300 group-hover:text-white">
                     {project.detail}
                   </p>
                   <p className="mt-8 inline-flex border-b border-purple/35 pb-1 text-[0.68rem] font-medium uppercase tracking-wideish text-white/50 transition duration-300 group-hover:border-purple/75 group-hover:text-white/70">
@@ -250,7 +250,7 @@ export default function Home() {
               <h2 className="mx-auto max-w-5xl font-sans text-[clamp(2.55rem,4.75vw,4.4rem)] leading-[1.02]">
                 ¿Tienes una marca que necesita verse más clara y profesional?
               </h2>
-              <p className="mx-auto mt-5 max-w-xl text-xl font-extralight leading-9 text-white/50 lg:mt-6">
+              <p className="mx-auto mt-5 max-w-xl text-xl font-extralight leading-9 text-white/75 lg:mt-6">
                 Hablemos y definimos qué necesita primero.
               </p>
             </div>
