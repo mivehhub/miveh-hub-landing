@@ -130,7 +130,7 @@ export default function Home() {
             width={420}
             height={62}
             priority
-            className="w-[449px] md:w-[726px] mb-6"
+            className="w-[404px] md:w-[653px] mb-6"
           />
           <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.02rem] font-extralight leading-[1.68] text-white/75 sm:mt-10 sm:text-[1.26rem] sm:leading-[1.58]">
             Creamos presencia digital clara, visual y alineada para marcas que
@@ -278,7 +278,13 @@ export default function Home() {
             aria-hidden="true"
             className="h-4 w-4 opacity-75"
           />
-          Miveh Hub
+          <Image
+            src="/logo-light-nav.png"
+            alt="Miveh Hub"
+            width={140}
+            height={21}
+            className="opacity-60 mb-2"
+          />
         </span>
         <span>web + contenido + diseño</span>
       </footer>
