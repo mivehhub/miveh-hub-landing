@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const services = [
   {
     title: "Web",
@@ -99,7 +101,7 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-ink text-white">
       <header className="mx-auto flex w-full max-w-[88rem] items-center justify-between px-5 py-7 sm:px-8 lg:px-12 lg:py-9">
-        <a href="#hero" className="font-sans text-sm font-light lowercase tracking-widest text-white transition duration-300 hover:opacity-85">miveh hub</a>
+        <a href="#hero" className="font-sans text-base font-light lowercase tracking-widest text-white transition duration-300 hover:opacity-85">miveh hub</a>
         <nav aria-label="Primary navigation" className="hidden gap-8 text-[0.82rem] font-medium tracking-[0.055em] text-white/50 md:flex">
           {["Servicios", "Proceso", "Proyectos", "Contacto"].map((item) => (
             <a
@@ -122,10 +124,14 @@ export default function Home() {
           <p className="mb-7 text-[0.72rem] font-medium uppercase tracking-wideish text-white/50 sm:mb-9 sm:text-xs">
             web + contenido + diseño
           </p>
-          <h1 className="max-w-[11ch] font-sans text-[clamp(4.15rem,9.5vw,8rem)] leading-[0.9] tracking-normal text-balance">
-            <span className="font-medium">miveh</span>{" "}
-            <span className="font-extralight">hub</span>
-          </h1>
+          <Image
+            src="/logo-light-nav.png"
+            alt="Miveh Hub"
+            width={420}
+            height={62}
+            priority
+            className="w-[260px] md:w-[420px] mb-6"
+          />
           <p className="mt-8 max-w-[35.5rem] text-pretty text-[1.2rem] font-extralight leading-[1.68] text-white/50 sm:mt-10 sm:text-[1.48rem] sm:leading-[1.58]">
             Creamos presencia digital clara, visual y alineada para marcas que
             quieren verse más profesionales sin complicarse.
