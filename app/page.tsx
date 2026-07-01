@@ -272,17 +272,11 @@ export default function Home() {
 
       <footer className="mx-auto flex w-full max-w-[88rem] flex-col gap-4 px-5 pb-8 text-[0.68rem] font-medium uppercase tracking-wideish text-white/50 sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
         <span className="flex items-center gap-2.5">
-          <img
-            src="/grape-icon.png"
-            alt=""
-            aria-hidden="true"
-            className="h-4 w-4 opacity-75"
-          />
           <Image
             src="/logo-light-nav.png"
             alt="Miveh Hub"
-            width={140}
-            height={21}
+            width={133}
+            height={20}
             className="opacity-60 mb-2"
           />
         </span>
